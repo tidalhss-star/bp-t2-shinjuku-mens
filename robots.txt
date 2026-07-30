@@ -2,4 +2,5 @@ User-agent: *
 Allow: /
 
 Sitemap: https://maphoshirts.live/sitemap.xml
+Sitemap: https://maphoshirts.live/sitemap-pages.xml
 Sitemap: https://maphoshirts.live/sitemap-index.xml
