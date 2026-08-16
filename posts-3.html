@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>글 목록 (3/3) · t2-shinjuku-mens</title>
+  <meta name="description" content="t2-shinjuku-mens에 올라온 글 목록입니다.">
+  <link rel="canonical" href="https://maphoshirts.live/posts-3.html">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <style>
+:root{--primary:#c8a96e;--accent:#e8c87a;--bg:#0d0d12;--bg2:#13131a;--bg3:#1a1a24;--text:#e8e8f0;--muted:#8888a0;--border:#2a2a3a;--radius:12px}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Pretendard','Apple SD Gothic Neo','Noto Sans KR',sans-serif;background:var(--bg);color:var(--text);line-height:1.7}
+a{color:var(--primary);text-decoration:none}a:hover{color:var(--accent)}
+header{position:sticky;top:0;z-index:100;background:rgba(13,13,18,.95);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:0 5%}
+.hi{display:flex;align-items:center;justify-content:space-between;height:64px;max-width:1200px;margin:0 auto}
+.logo{font-size:1.2rem;font-weight:800;color:var(--accent)}
+.logo small{color:var(--muted);font-weight:400;font-size:.8rem;margin-left:6px}
+nav a{font-size:.88rem;color:var(--muted);margin-left:24px;transition:.2s}
+nav a:hover{color:var(--accent)}
+.hcta{background:var(--primary);color:#000;padding:8px 16px;border-radius:6px;font-weight:700;font-size:.88rem}
+.hcta:hover{background:var(--accent);color:#000}
+.hero{min-height:85vh;display:flex;align-items:center;padding:80px 5%;background:linear-gradient(135deg,#0d0d12,#1a1220,#0d0d12);position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 80% 60% at 60% 40%,rgba(200,169,110,.12),transparent 70%)}
+.hc{max-width:700px;position:relative;z-index:1}
+.badge{display:inline-flex;align-items:center;gap:6px;background:rgba(200,169,110,.15);border:1px solid rgba(200,169,110,.3);border-radius:50px;padding:5px 14px;font-size:.8rem;color:var(--primary);margin-bottom:24px}
+.hc h1{font-size:clamp(2rem,5vw,3.2rem);font-weight:900;line-height:1.15;letter-spacing:-1px;margin-bottom:18px}
+.hc h1 em{color:var(--accent);font-style:normal}
+.hsub{font-size:1rem;color:var(--muted);margin-bottom:32px;line-height:1.8}
+.acts{display:flex;flex-wrap:wrap;gap:12px}
+.btn{background:linear-gradient(135deg,var(--primary),var(--accent));color:#000;padding:14px 28px;border-radius:8px;font-weight:800;font-size:.95rem;transition:.3s;display:inline-block}
+.btn:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(200,169,110,.4);color:#000}
+.btn2{border:1.5px solid var(--border);color:var(--text);padding:14px 24px;border-radius:8px;font-weight:600;font-size:.95rem;transition:.3s}
+.btn2:hover{border-color:var(--primary);color:var(--primary)}
+.phone{font-size:1.8rem;font-weight:900;color:var(--accent);margin-top:28px;letter-spacing:1px}
+.phone small{display:block;font-size:.82rem;color:var(--muted);font-weight:400}
+.stats{background:var(--bg2);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:22px 5%}
+.sg{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:16px;text-align:center}
+.sn{font-size:1.6rem;font-weight:900;color:var(--accent)}
+.sl{font-size:.8rem;color:var(--muted);margin-top:2px}
+section{padding:72px 5%}
+.si{max-width:1200px;margin:0 auto}
+.sh{text-align:center;margin-bottom:48px}
+.stag{display:inline-block;background:rgba(200,169,110,.1);color:var(--primary);font-size:.76rem;font-weight:700;padding:4px 12px;border-radius:50px;letter-spacing:1px;margin-bottom:12px}
+.sh h2{font-size:clamp(1.5rem,3vw,2.2rem);font-weight:900;letter-spacing:-.5px}
+.sh p{color:var(--muted);margin-top:10px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px}
+.card{background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius);padding:28px 24px;transition:.3s;position:relative;overflow:hidden}
+.card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--primary),var(--accent))}
+.card:hover{border-color:var(--primary);transform:translateY(-3px)}
+.ci{font-size:1.8rem;margin-bottom:14px}
+.card h3{font-size:1.05rem;font-weight:800;margin-bottom:8px}
+.card p{font-size:.88rem;color:var(--muted);line-height:1.7}
+.ptable{width:100%;border-collapse:collapse;border-radius:12px;overflow:hidden}
+.ptable th{background:linear-gradient(135deg,#1e1a10,#2a2010);color:var(--accent);padding:14px 18px;text-align:left;font-size:.88rem;font-weight:700;border-bottom:2px solid var(--primary)}
+.ptable td{padding:14px 18px;border-bottom:1px solid var(--border);font-size:.92rem}
+.ptable tr:hover td{background:rgba(200,169,110,.05)}
+.ptable tr:last-child td{border-bottom:none}
+.pbadge{background:rgba(200,169,110,.15);color:var(--primary);padding:2px 8px;border-radius:4px;font-size:.76rem;font-weight:700}
+.pvip{color:var(--accent);font-weight:800}
+.reviews{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px}
+.rv{background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius);padding:22px}
+.rstars{color:var(--accent);margin-bottom:8px;letter-spacing:2px}
+.rtxt{font-size:.9rem;color:var(--muted);line-height:1.8;margin-bottom:12px}
+.rauth{font-size:.8rem;color:var(--muted)}
+.rauth strong{color:var(--text)}
+.ctasec{background:linear-gradient(135deg,#1a1410,#0d0d12);text-align:center;padding:72px 5%}
+.ctasec h2{font-size:1.8rem;font-weight:900;margin-bottom:14px}
+.ctaph{font-size:2.4rem;font-weight:900;color:var(--accent);margin:20px 0;letter-spacing:2px}
+.ctanote{color:var(--muted);font-size:.88rem;margin-bottom:28px}
+footer{background:var(--bg2);border-top:1px solid var(--border);padding:36px 5% 24px}
+.fi{max-width:1200px;margin:0 auto}
+.ft{display:grid;grid-template-columns:2fr 1fr 1fr;gap:36px;margin-bottom:28px}
+.fb h3{font-size:1rem;font-weight:800;color:var(--accent);margin-bottom:8px}
+.fb p{font-size:.83rem;color:var(--muted);line-height:1.7}
+.fc h4{font-size:.88rem;font-weight:700;margin-bottom:10px}
+.fc ul{list-style:none}
+.fc li{margin-bottom:6px}
+.fc a{font-size:.83rem;color:var(--muted)}
+.fc a:hover{color:var(--primary)}
+.fbot{border-top:1px solid var(--border);padding-top:18px;text-align:center;font-size:.78rem;color:var(--muted)}
+@media(max-width:768px){nav{display:none}.sg{grid-template-columns:repeat(2,1fr)}.ft{grid-template-columns:1fr}.phone{font-size:1.4rem}}
+</style>
+  <meta property="og:title" content="글 목록 (3/3) · t2-shinjuku-mens">
+  <meta property="og:description" content="t2-shinjuku-mens에 올라온 글 목록입니다.">
+  <meta property="og:url" content="https://maphoshirts.live/posts-3.html">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary">
+</head>
+<body>
+  <div class="container">
+    <header><div class="hi"><div class="logo">마포 럭셔리</div><nav><a href="index.html">홈</a></nav></div></header>
+    <main>
+      <h1>글 목록</h1>
+      <p>전체 56개 · 3/3 페이지</p>
+      <ul class="post-list">
+      <li class="post-item">
+        <a class="post-item__link" href="posts/myth-003-mhwmg4.html">인솔 로고 미세 변화, 신발 실루엣보다 더 민감한 감수성</a>
+        <p class="post-item__summary">2023 년 여름에 다시 출시된 Gel-Kayano 14 OG 아이보리 컬러웨이, 외부에서는 크게 눈에 띄지 않던 부분이 하나 있다. 일반 소비자들은 겉보기에 완벽하게 동일한 제품이라고 생각하기 쉽</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/myth-003-yp0s09.html">마포 홍대 단체 가라오케 예약 가이드</a>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/myth-004-199r7ng.html">...</a>
+        <p class="post-item__summary">마포와 홍대, 합정 일대는 단체 모임 장소로 가라오케를 찾는 발길이 잦은 지역이다. 인원이 많은 모임일수록 예약 과정에서 확인할 사항이 늘어나는데, 이 과정에서 흔히 하는 오해 때문에 당일 자리 배</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/myth-004-tkt11f.html">홍대 가라오케 30만원 썼는데 왜 술상이 헛헛하냐? 룸비 까발리는 형의 원가 정산</a>
+        <p class="post-item__summary">영업 끝나고 새벽 3시, 합정역 근처 골목에서 가게 정리하는 사장님 하나 붙잡고 아이스 아메리카노 사드리면서 본 테이블별 원가 정산서 말이다. 세금계산서 말고, 진짜 현금흐름 기준으로 까놓고 보니까</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/myth-005-i5pshj.html">마포 홍대 단체 가라오케 예약 가이드</a>
+        <p class="post-item__summary">1982년 여름, 소품실 바닥에 놓인 유니콘 조각상 하나. 블루투스 이어폰 케이스보다 작은 이 녀석 때문에 편집실에서 밤 새운 적 있다.</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/qa-001-1dr1vko.html">마포 단체 회식에서 실패하지 않는 가라오케 선별법</a>
+        <p class="post-item__summary">요즘 애들은 술자리 하나 잡는 것도 제대로 못 해서 여기저기 헛다리만 짚고 다닌다. 내가 이 바닥에서 잔뼈가 굵은 사람으로서 한마디 하자면, 마포 일대에서 괜찮은 가라오케 찾는 건 단순히 시설 좋은</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/qa-001-1eggqz3.html">마포 홍대 단체 가라오케 예약 가이드</a>
+        <p class="post-item__summary">다크소울 데모 버전과 정식 발매본의 적 배치 차이가 몇 개인 줄 아세요? 공식적으로 확인된 것만 열두 가지가 넘습니다.게다가</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/qa-001-ja3fnk.html">2003 파리 덩크의 실밥 하나에 목숨 거는 이유: 마포 홍대 단체 가라오케 예약 가이드</a>
+        <p class="post-item__summary">&quot;야, 이거 박스 모서리 살짝 찢어졌는데 그냥 감가 없이 넘어가면 안 되냐?&quot;</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/qa-002-logoh2.html">홍대 단체 룸 예약할 때 놓치면 후회하는 체크리스트</a>
+        <p class="post-item__summary">타일러 더든의 첫 번째 싱글 프레임은 정확히 1시간 12분 49초에 나옵니다. 프로젝터가 24프레임으로 돌아가는 순간, 편집실 모니터에는 흰 셔츠를 입은 남자의 윤곽만 1/24초간 번쩍이고 사라지죠</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/qa-002-mhwmg4.html">마포 홍대 단체 가라오케 예약 가이드</a>
+        <p class="post-item__summary">board games, terraforming mars, venus expansion, table top game, group session, gaming cafe, party setup, stra</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/qa-002-ogktlr.html">마포 홍대 단체 가라오케 예약 전, 형이 꼭 따져봐야 할 원가 구조의 진짜 이야기</a>
+        <p class="post-item__summary">월 매출 3000만 원을 찍어도 6개월 만에 문 닫는 경우, 뭐가 문제일까? 나는 합정에서 2년간 룸 단위 가라오케를 운영했던 전직 업주다. 처음엔 화려한 인테리어와 SNS 마케팅으로 장사가 잘됐지</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/qa-003-11amsjh.html">형들 박스 하나 때문에 80만원 날렸다... 나이키 SB 덩크 파리 03 vs 21 디테일 차이</a>
+        <p class="post-item__summary">스니커즈 커스텀 8년차인데 아직도 헷갈리는 사람 많더라. 나이키 SB 덩크 로우 파리(PARIS) 2003년 오리지널과 2021년 레트로판, 겉보기엔 비슷한데 박스 열어보면 완전 다른 신발이야. 특</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/qa-003-199r7ng.html">마포 단체 회식에서 실패하지 않는 가라오케 예약의 기술</a>
+        <p class="post-item__summary">요즘 애들은 회식 장소 잡는 거 보면 참 답답해. 그냥 지도 앱 켜서 별점 높은 곳 대충 찍고 예약 누르면 끝인 줄 알지. 내가 이 바닥에서 이십 년 넘게 굴러먹으면서 본 결과, 마포 일대에서 단체</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/qa-004-1jpc3y0.html">72시간 만에 내려간 내 게임이 보여준, 홍대 단체 회식의 숨겨진 데이터</a>
+        <p class="post-item__summary">&quot;형, 우리 진짜 3일 만에 끝났어.&quot;</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/qa-005-1ul82gq.html">마포 가라오케 VIP 룸 예약 시 흔히 저지르는 실수와 대응법</a>
+        <p class="post-item__summary">요즘 애들은 가라오케를 무슨 패스트푸드 주문하듯 가볍게 생각하는 경향이 있는데, 마포 바닥에서 산전수전 다 겪은 내 입장에서 보면 참 가소롭기 짝이 없다. 단체 예약을 잡을 때 단순히 인원수만 말하</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/qa-005-jmbr1h.html">Created Title</a>
+        <p class="post-item__summary">마포와 홍대, 합정에서 단체 모임으로 가라오케를 이용하려는 사람들이 흔히 묻는 질문을 정리했다. 지역별로 확인할 부분이 조금씩 다르므로, 방문 예정 지역에 맞는 내용을 참고하면 도움이 된다.</p>
+      </li>
+      </ul>
+    <nav class="pager">
+      <a class="pager__link" href="posts.html">1</a>
+      <a class="pager__link" href="posts-2.html">2</a>
+      <span class="pager__current">3</span>
+    </nav>
+    </main>
+  </div>
+</body>
+</html>

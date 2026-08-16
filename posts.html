@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>글 목록 (1/3) · t2-shinjuku-mens</title>
+  <meta name="description" content="t2-shinjuku-mens에 올라온 글 목록입니다.">
+  <link rel="canonical" href="https://maphoshirts.live/posts.html">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <style>
+:root{--primary:#c8a96e;--accent:#e8c87a;--bg:#0d0d12;--bg2:#13131a;--bg3:#1a1a24;--text:#e8e8f0;--muted:#8888a0;--border:#2a2a3a;--radius:12px}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Pretendard','Apple SD Gothic Neo','Noto Sans KR',sans-serif;background:var(--bg);color:var(--text);line-height:1.7}
+a{color:var(--primary);text-decoration:none}a:hover{color:var(--accent)}
+header{position:sticky;top:0;z-index:100;background:rgba(13,13,18,.95);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:0 5%}
+.hi{display:flex;align-items:center;justify-content:space-between;height:64px;max-width:1200px;margin:0 auto}
+.logo{font-size:1.2rem;font-weight:800;color:var(--accent)}
+.logo small{color:var(--muted);font-weight:400;font-size:.8rem;margin-left:6px}
+nav a{font-size:.88rem;color:var(--muted);margin-left:24px;transition:.2s}
+nav a:hover{color:var(--accent)}
+.hcta{background:var(--primary);color:#000;padding:8px 16px;border-radius:6px;font-weight:700;font-size:.88rem}
+.hcta:hover{background:var(--accent);color:#000}
+.hero{min-height:85vh;display:flex;align-items:center;padding:80px 5%;background:linear-gradient(135deg,#0d0d12,#1a1220,#0d0d12);position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 80% 60% at 60% 40%,rgba(200,169,110,.12),transparent 70%)}
+.hc{max-width:700px;position:relative;z-index:1}
+.badge{display:inline-flex;align-items:center;gap:6px;background:rgba(200,169,110,.15);border:1px solid rgba(200,169,110,.3);border-radius:50px;padding:5px 14px;font-size:.8rem;color:var(--primary);margin-bottom:24px}
+.hc h1{font-size:clamp(2rem,5vw,3.2rem);font-weight:900;line-height:1.15;letter-spacing:-1px;margin-bottom:18px}
+.hc h1 em{color:var(--accent);font-style:normal}
+.hsub{font-size:1rem;color:var(--muted);margin-bottom:32px;line-height:1.8}
+.acts{display:flex;flex-wrap:wrap;gap:12px}
+.btn{background:linear-gradient(135deg,var(--primary),var(--accent));color:#000;padding:14px 28px;border-radius:8px;font-weight:800;font-size:.95rem;transition:.3s;display:inline-block}
+.btn:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(200,169,110,.4);color:#000}
+.btn2{border:1.5px solid var(--border);color:var(--text);padding:14px 24px;border-radius:8px;font-weight:600;font-size:.95rem;transition:.3s}
+.btn2:hover{border-color:var(--primary);color:var(--primary)}
+.phone{font-size:1.8rem;font-weight:900;color:var(--accent);margin-top:28px;letter-spacing:1px}
+.phone small{display:block;font-size:.82rem;color:var(--muted);font-weight:400}
+.stats{background:var(--bg2);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:22px 5%}
+.sg{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:16px;text-align:center}
+.sn{font-size:1.6rem;font-weight:900;color:var(--accent)}
+.sl{font-size:.8rem;color:var(--muted);margin-top:2px}
+section{padding:72px 5%}
+.si{max-width:1200px;margin:0 auto}
+.sh{text-align:center;margin-bottom:48px}
+.stag{display:inline-block;background:rgba(200,169,110,.1);color:var(--primary);font-size:.76rem;font-weight:700;padding:4px 12px;border-radius:50px;letter-spacing:1px;margin-bottom:12px}
+.sh h2{font-size:clamp(1.5rem,3vw,2.2rem);font-weight:900;letter-spacing:-.5px}
+.sh p{color:var(--muted);margin-top:10px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px}
+.card{background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius);padding:28px 24px;transition:.3s;position:relative;overflow:hidden}
+.card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--primary),var(--accent))}
+.card:hover{border-color:var(--primary);transform:translateY(-3px)}
+.ci{font-size:1.8rem;margin-bottom:14px}
+.card h3{font-size:1.05rem;font-weight:800;margin-bottom:8px}
+.card p{font-size:.88rem;color:var(--muted);line-height:1.7}
+.ptable{width:100%;border-collapse:collapse;border-radius:12px;overflow:hidden}
+.ptable th{background:linear-gradient(135deg,#1e1a10,#2a2010);color:var(--accent);padding:14px 18px;text-align:left;font-size:.88rem;font-weight:700;border-bottom:2px solid var(--primary)}
+.ptable td{padding:14px 18px;border-bottom:1px solid var(--border);font-size:.92rem}
+.ptable tr:hover td{background:rgba(200,169,110,.05)}
+.ptable tr:last-child td{border-bottom:none}
+.pbadge{background:rgba(200,169,110,.15);color:var(--primary);padding:2px 8px;border-radius:4px;font-size:.76rem;font-weight:700}
+.pvip{color:var(--accent);font-weight:800}
+.reviews{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px}
+.rv{background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius);padding:22px}
+.rstars{color:var(--accent);margin-bottom:8px;letter-spacing:2px}
+.rtxt{font-size:.9rem;color:var(--muted);line-height:1.8;margin-bottom:12px}
+.rauth{font-size:.8rem;color:var(--muted)}
+.rauth strong{color:var(--text)}
+.ctasec{background:linear-gradient(135deg,#1a1410,#0d0d12);text-align:center;padding:72px 5%}
+.ctasec h2{font-size:1.8rem;font-weight:900;margin-bottom:14px}
+.ctaph{font-size:2.4rem;font-weight:900;color:var(--accent);margin:20px 0;letter-spacing:2px}
+.ctanote{color:var(--muted);font-size:.88rem;margin-bottom:28px}
+footer{background:var(--bg2);border-top:1px solid var(--border);padding:36px 5% 24px}
+.fi{max-width:1200px;margin:0 auto}
+.ft{display:grid;grid-template-columns:2fr 1fr 1fr;gap:36px;margin-bottom:28px}
+.fb h3{font-size:1rem;font-weight:800;color:var(--accent);margin-bottom:8px}
+.fb p{font-size:.83rem;color:var(--muted);line-height:1.7}
+.fc h4{font-size:.88rem;font-weight:700;margin-bottom:10px}
+.fc ul{list-style:none}
+.fc li{margin-bottom:6px}
+.fc a{font-size:.83rem;color:var(--muted)}
+.fc a:hover{color:var(--primary)}
+.fbot{border-top:1px solid var(--border);padding-top:18px;text-align:center;font-size:.78rem;color:var(--muted)}
+@media(max-width:768px){nav{display:none}.sg{grid-template-columns:repeat(2,1fr)}.ft{grid-template-columns:1fr}.phone{font-size:1.4rem}}
+</style>
+  <meta property="og:title" content="글 목록 (1/3) · t2-shinjuku-mens">
+  <meta property="og:description" content="t2-shinjuku-mens에 올라온 글 목록입니다.">
+  <meta property="og:url" content="https://maphoshirts.live/posts.html">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary">
+</head>
+<body>
+  <div class="container">
+    <header><div class="hi"><div class="logo">마포 럭셔리</div><nav><a href="index.html">홈</a></nav></div></header>
+    <main>
+      <h1>글 목록</h1>
+      <p>전체 56개 · 1/3 페이지</p>
+      <ul class="post-list">
+      <li class="post-item">
+        <a class="post-item__link" href="posts/field_note-001-124xpeu.html">합정 가라오케 15인 단체 예약하다 밤샐 뻔한 썰.txt</a>
+        <p class="post-item__summary">1982년 6월, 컬버시티의 작은 창고. 소품 담당 테리 루이스는 손에 쥔 2달러짜리 유니콘 종이접기가 너무 조악해서 눈물이 날 지경이었다. 리들리 스콧이 방금 전까지 &quot;꿈 속에서 유니콘이 달리는 </p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/field_note-001-199r7ng.html">마포 홍대 단체 가라오케 예약 가이드</a>
+        <p class="post-item__summary">전직 업주의 증언을 따라 월 매출 3,000 만 원을 찍고도 6 개월 만에 문을 닫은 사례를 분석해 보았다. 당시 사용된 POS 시스템 버전 pos_system_v4.2_error_501 에 기록된</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/field_note-001-1clyhkb.html">절판본 거래하다 사기당한 썰, 그리고 진짜 정품 감별하는 형님의 더러운 노하우</a>
+        <p class="post-item__summary">사람들은 보통 글룸헤이븐 확장판이 비싸니까 가짜가 많을 거라 생각하지만, 실상은 정반대야. 진짜 문제는 본판, 그것도 1판 초쇄본에서 터진다. 왜냐고? 애들이 2판 나왔다고 1판을 헐값에 풀어대는데</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/field_note-002-s3xjd0.html">2023년 홍대 폐업 매장 11곳 돌아보니, 공기값이 문제였습니다</a>
+        <p class="post-item__summary">3.2㎡당 월 임대료가 38만원이던 라인의 2023년 11월, 지하 1층 소고기숯불구이집이 문을 닫았다. 마지막 손님은 나였고, 사장은 &quot;원가 맞추려고 고기 150g에 2,900원씩 올렸는데, 그게</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/field_note-003-i8fi2m.html">홍대 3년 버티면 반은 이긴다더니, 2023년에 무너진 가게들이 남긴 메모장 한 장</a>
+        <p class="post-item__summary">합정역 3번 출구에서 쭉 올라가면 왼쪽에 작은 골목이 하나 있다. 그 골목 안에 2021년 여름 문을 연 가라오케가 있었는데, 내가 마지막으로 갔던 날 메뉴판 뒷면에 연필로 적힌 숫자가 있었다. &quot;</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/field_note-003-jmbr1h.html">마포 가라오케 단체 방문 시 반드시 확인해야 할 인원 배치와 공간 효율성</a>
+        <p class="post-item__summary">마포 일대에서 단체 회식이나 모임을 계획할 때 가장 흔히 저지르는 실수는 인원수만 대충 맞춰서 방을 잡는 것이다. 과거에 내가 이 바닥을 굴러먹을 때만 해도 손님들은 무작정 큰 방을 달라고 소리를 </p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/field_note-004-1f4oh3n.html">Paris 덩크를 까보니까 박스가 먼저 말하더라, 이건 03년산이라고</a>
+        <p class="post-item__summary">작업실 문 열자마자 형이 던진 한마디에 기분이 확 가라앉았어. &quot;야, 이 파리 덩크 박스 왜 이래?&quot; 2021년 레트로판을 들고 온 손님이었는데, 보관하던 박스 상단이 눌려서 모서리가 조금 찢긴 상</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/field_note-004-1v1zp1d.html">홍대 단체 회식 자리 잡을 때, 내가 매번 같은 실수 반복한 이유</a>
+        <p class="post-item__summary">2024년 가을, 팀 회식 네 번째 시도 만에야 겨우 자리가 잡혔다. 인원 14명.</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/field_note-004-9orlhc.html">&amp;quot;형님, 매출 3천인데 왜 남는 게 없죠?&amp;quot; 홍대 합정 룸 비즈니스의 화려한 껍데기와 진짜 마진율</a>
+        <p class="post-item__summary">&quot;에어컨 디스플레이에 CH05 에러 뜨는 순간, 그날 장사는 끝난 겁니다.&quot;</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/field_note-005-19zang5.html">홍대 가라오케 예약, 30명 넘기면 무조건слуша야 할 것들</a>
+        <p class="post-item__summary">목동에서 30명 회식 치르고 나서 깨달은 게 있다. 룸 세 개 잡으면 되겠지 했는데, 막상 도착하니까 하나는 에어컨 고장, 하나는 노래방 기기가 2012년 모델이라 반주가 완전히 달랐다. 남은 건 </p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/field_note-005-mhwmg4.html">영화의 숨은 프레임, 합정 노래방 예약의 숨은 규칙</a>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/field_note-005-sli90b.html">홍대 단체 룸 예약할 때 데이터마이너처럼 분석하면 안 망한다</a>
+        <p class="post-item__summary">엘든링에서 컷된 보스 중 하나가 별도 페이즈 전환 없이 1~2페이즈로 끝나도록 설계된 적 있었다고 하면, 어떤 느낌이 먼저 드는가?</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/guide-001-1i4vsp.html">홍대 권리금 2억 건지려면 알아야 할 폐업 냄새 감지법</a>
+        <p class="post-item__summary">지난 3월 홍대입구역 2번 출구 앞에서 임대차 계약서를 들여다보는데, 업주가 펜으로 동그라미 쳐놓은 문구 하나가 눈에 들어왔다. &quot;갱신 시 임대인과 임차인이 상호 협의하여 월세 조정&quot;. 이 한 줄 </p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/guide-002-b8fdjc.html">홍대 단체 룸 예약, 초보가 가장 먼저 물어봐야 할 것</a>
+        <p class="post-item__summary">47.8%. 합정역 반경 800m 이내 룸 중 단체 예약 후 실제 만족도를 남긴 리뷰의 비율이다. 그중 &quot;다시 왔다&quot;고 답한 건 23.1%에 불과하다. 단체 룸 한 번 잘못 잡으면 인원 한 명이 불</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/guide-002-jmbr1h.html">1972 년 청문회 USB 오리지널, 마포 VIP 룸 열쇠로 읽는 비밀</a>
+        <p class="post-item__summary">retro terminal, 1970s computer, neon light, dark room, whistleblower, usb drive, mysterious atmosphere, cyber </p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/guide-003-1027r47.html">홍대에서 밤새 달릴 형님들을 위한 프리미엄 가이드: 0.1% 디테일이 만드는 합정 라인의 차이</a>
+        <p class="post-item__summary">2011년 6월 15일 배</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/guide-003-17cmwtj.html">사라진 슬라이드 7번이 남긴 흔적, 그리고 마포 밤거리의 지독한 보안 룰</a>
+        <p class="post-item__summary">03:14 AM. 모니터 오른쪽 하단에 표시된 원본 PDF 파일의 용량은 정확히 11.4MB였다. 하지만 패킷 분석기로 쪼개어 본 실제 전송 바이트 수는 이보다 약 14.2KB가 더 많았다.</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/guide-003-1wmqoag.html">홍대 뒷골목 단체 룸 잡을 때ENTA가 필요한 이유</a>
+        <p class="post-item__summary">다크소울 1의 정식 출시 버전에서 볼 수 없는 무기 모델이 게임 파일 깊숙이 잠들어 있다는 사실, 들어본 적 있나? 데이터 마이너 커뮤니티에서 수년간 발굴한 결과물 중 하나인데, 문제는 이 무기들이</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/guide-004-15xeh65.html">가라오케/VIP 해결 방법 총정리</a>
+        <p class="post-item__summary">37.99달러. 2017년 킥스타터로 배송된 글룸헤이븐 1판 초회분 한 상자의 현재 중고 시세다. 134.99달러인 2판 리테일과 비교하면, 같은 게임인데 가격이 4배 가까이 벌어진 셈이지.</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/guide-004-1o45ol3.html">마포 홍대 단체 가라오케 예약, 형이 밤 새워가며 터득한 생존 매뉴얼</a>
+        <p class="post-item__summary">예약 확정 문자 받고 나서 &quot;혹시 이 방 진짜 쓸 수 있는 거 맞아?&quot;라고 다시 한 번 확인 전화 건 적 있는 사람?</p>
+      </li>
+      </ul>
+    <nav class="pager">
+      <span class="pager__current">1</span>
+      <a class="pager__link" href="posts-2.html">2</a>
+      <a class="pager__link" href="posts-3.html">3</a>
+    </nav>
+    </main>
+  </div>
+</body>
+</html>
